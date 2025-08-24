@@ -1,0 +1,159 @@
+import 'package:flutter/material.dart';
+
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0,
+        scrolledUnderElevation: 0,
+        backgroundColor: Colors.white,
+        title: Text(
+          "Sign Up",
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.w400,
+            color: Color(0xffFF5E00),
+          ),
+        ),
+        centerTitle: true,
+        leading: GestureDetector(
+          onTap: () {},
+          child: Icon(
+            Icons.arrow_back_ios_new,
+            color: Color(0xffFF5E00),
+          ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(
+                height: 7,
+              ),
+              Image.asset(
+                "assets/images/signUp.png",
+                height: 278,
+                width: 278,
+                fit: BoxFit.scaleDown,
+              ),
+              SizedBox(
+                height: 13,
+              ),
+              Text(
+                "Please enter your information to create an account.",
+                style: TextStyle(
+                    color: Color(0xff6D3805),
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  fillColor: Colors.grey.shade200,
+                  filled: true,
+                  hintText: "Name",
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5),
+                    borderSide: BorderSide(
+                      color: Color(0xffF3F3F3),
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(color: Colors.orange)),
+                ),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    fillColor: Colors.grey.shade200,
+                    filled: true,
+                    hintText: "Email",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: BorderSide(
+                          color: Color(0xffF3F3F3),
+                        )),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: BorderSide(
+                          color: Color(0xffF3F3F3),
+                        ))),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    suffixIcon: Icon(
+                      Icons.visibility_outlined,
+                      color: Colors.orange,
+                    ),
+                    fillColor: Colors.grey.shade200,
+                    filled: true,
+                    hintText: "Password",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: BorderSide(
+                          color: Color(0xffF3F3F3),
+                        )),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: BorderSide(
+                          color: Color(0xffF3F3F3),
+                        ))),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    suffixIcon: Icon(
+                      Icons.visibility_outlined,
+                      color: Colors.orange,
+                    ),
+                    fillColor: Colors.grey.shade200,
+                    filled: true,
+                    hintText: "Confirm Password",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: BorderSide(
+                          color: Color(0xffF3F3F3),
+                        )),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: BorderSide(
+                          color: Color(0xffF3F3F3),
+                        ))),
+              ),
+              SizedBox(
+                height: 29,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.orange,
+                    fixedSize: Size.fromHeight(50)),
+                child: Text(
+                  "Sign Up",
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
