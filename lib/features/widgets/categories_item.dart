@@ -16,7 +16,7 @@ class CategoriesItem extends StatelessWidget {
       spacing: 12,
       children: [
         CircleAvatar(
-          radius: 70,
+          radius: 40,
           backgroundColor: backgroundColor,
           child: Image.asset(image),
         ),
