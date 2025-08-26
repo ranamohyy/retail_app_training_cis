@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/core/helpers/app_elevated_button.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+import '../../core/helpers/app_outlined_button.dart';
+
+class OnBoardingScreen extends StatelessWidget {
+  const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,42 +49,11 @@ class SplashScreen extends StatelessWidget {
             SizedBox(
               height: 51,
             ),
-            ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xffFF5E00),
-                  fixedSize: Size(double.infinity, 50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50),
-                    side: BorderSide(color: Color(0xf2dc9b10), width: 2),
-                  ),
-                ),
-                child: Text("Sign Up",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 17,
-                    ))),
+            AppElevatedButton(text: "Sign Up"),
             SizedBox(
               height: 16,
             ),
-            OutlinedButton(
-              onPressed: () {},
-              style: OutlinedButton.styleFrom(
-                fixedSize: Size(300, 50),
-                side: BorderSide(
-                  color: Color(0xffFF5E00),
-                ),
-                backgroundColor: Colors.white,
-              ),
-              child: Text(
-                "Sign in",
-                style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 17,
-                    color: Color(0xffFF5E00)),
-              ),
-            ),
+            AppOutlinedButton(text: "Sign in",),
 
           ],
         ),

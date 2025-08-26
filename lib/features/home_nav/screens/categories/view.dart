@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/core/helpers/app_assets.dart';
 
 import '../../../widgets/categories_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
-  CategoriesScreen({super.key});
+ const CategoriesScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +20,7 @@ class CategoriesScreen extends StatelessWidget {
                 child: CategoriesItem(
                   label:  "Fruit",
                   backgroundColor: Colors.blueAccent,
-                  image: "assets/images/enabbb.png",
+                  image: AppImages.enabImage,
                 ),
               )),
     );

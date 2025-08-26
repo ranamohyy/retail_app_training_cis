@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/core/helpers/app_assets.dart';
 
 import '../../../widgets/categories_item.dart';
 import '../../../widgets/deals_item.dart';
@@ -9,7 +10,13 @@ class HomePageScreen extends StatelessWidget {
   List<String>images=["assets/images/enabbb.png","assets/images/vagtables.png","assets/images/vagtables.png","assets/images/vagtables.png"];
   List<int>colors=[0xffEDD0FF,0xffFFD9BA,0xffFACCCC,0xffFACCCC];
   List<String>fruitName=["Apple","Banana", "Apple","Banana"];
-  List<String>fruitImage=["assets/images/apple.png","assets/images/vagtables.png","assets/images/apple.png","assets/images/vagtables.png"];
+  List<String>fruitImage=[    AppImages.appleImage,
+
+    AppImages.vagtablesImage,
+    AppImages.appleImage,
+   AppImages.appleImage,
+
+   ];
   List<String>prices=["900","800","700","500"];
 
   @override

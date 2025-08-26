@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/core/helpers/app_elevated_button.dart';
+import 'package:hello_flutter/core/helpers/app_field.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -53,48 +55,11 @@ class SignInScreen extends StatelessWidget {
               SizedBox(
                 height: 25,
               ),
-              TextFormField(
-                decoration: InputDecoration(
-                  hintText: "Email",
-                  filled: true,
-                  fillColor: Colors.grey.shade200,
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide(
-                      color: Color(0xffF3F3F3),
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide(
-                      color: Colors.orange,
-                    ),
-                  ),
-                ),
-              ),
+              AppTextField(hintText: "Email",),
               SizedBox(
                 height: 16,
               ),
-              TextFormField(
-                decoration: InputDecoration(
-                    suffixIcon: Icon(
-                      Icons.visibility_outlined,
-                      color: Color(0xffFF5E00),
-                    ),
-                    hintText: "Password",
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(color: Color(0xffF3F3F3)),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(
-                        color: Colors.orange,
-                      ),
-                    ),
-                    filled: true,
-                    fillColor: Colors.grey.shade200),
-              ),
+              AppTextField(hintText: "Password",showEyeIcon: true,),
               SizedBox(
                 height: 16,
               ),
@@ -109,24 +74,7 @@ class SignInScreen extends StatelessWidget {
               SizedBox(
                 height: 16,
               ),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xffFF5E00),
-                  fixedSize: Size(double.infinity, 50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                ),
-                child: Text(
-                  "Sign Up",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 17,
-                  ),
-                ),
-              ),
+              AppElevatedButton(text: "Sign In"),
               SizedBox(
                 height: 12,
               ),

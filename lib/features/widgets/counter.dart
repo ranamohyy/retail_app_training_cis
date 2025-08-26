@@ -11,6 +11,7 @@ class _CounterState extends State<Counter> {
   @override
   Widget build(BuildContext context) {
     return  Container(
+      padding: EdgeInsets.symmetric(horizontal: 4),
       width: 90,
       height:30,
     decoration: BoxDecoration(

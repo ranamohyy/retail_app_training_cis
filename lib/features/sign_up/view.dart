@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/core/helpers/app_elevated_button.dart';
+import 'package:hello_flutter/core/helpers/app_field.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -56,100 +58,23 @@ class SignUpScreen extends StatelessWidget {
               SizedBox(
                 height: 8,
               ),
-              TextFormField(
-                decoration: InputDecoration(
-                  fillColor: Colors.grey.shade200,
-                  filled: true,
-                  hintText: "Name",
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide(
-                      color: Color(0xffF3F3F3),
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: BorderSide(color: Colors.orange)),
-                ),
-              ),
+              AppTextField(hintText: "Name"),
               SizedBox(
                 height: 8,
               ),
-              TextFormField(
-                decoration: InputDecoration(
-                    fillColor: Colors.grey.shade200,
-                    filled: true,
-                    hintText: "Email",
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(
-                          color: Color(0xffF3F3F3),
-                        )),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(
-                          color: Color(0xffF3F3F3),
-                        ))),
-              ),
+              AppTextField(hintText: "Email"),
               SizedBox(
                 height: 8,
               ),
-              TextFormField(
-                decoration: InputDecoration(
-                    suffixIcon: Icon(
-                      Icons.visibility_outlined,
-                      color: Colors.orange,
-                    ),
-                    fillColor: Colors.grey.shade200,
-                    filled: true,
-                    hintText: "Password",
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(
-                          color: Color(0xffF3F3F3),
-                        )),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(
-                          color: Color(0xffF3F3F3),
-                        ))),
-              ),
+              AppTextField(hintText: "Password",showEyeIcon: true,),
               SizedBox(
                 height: 8,
               ),
-              TextFormField(
-                decoration: InputDecoration(
-                    suffixIcon: Icon(
-                      Icons.visibility_outlined,
-                      color: Colors.orange,
-                    ),
-                    fillColor: Colors.grey.shade200,
-                    filled: true,
-                    hintText: "Confirm Password",
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(
-                          color: Color(0xffF3F3F3),
-                        )),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(
-                          color: Color(0xffF3F3F3),
-                        ))),
-              ),
+              AppTextField(hintText: "Confirm Password",showEyeIcon: true,),
               SizedBox(
                 height: 29,
               ),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.orange,
-                    fixedSize: Size.fromHeight(50)),
-                child: Text(
-                  "Sign Up",
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
-              )
+              AppElevatedButton(text: "Sign Up")
             ],
           ),
         ),
