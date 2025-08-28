@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/core/helpers/app_assets.dart';
-
 import '../../../widgets/categories_item.dart';
 import '../../../widgets/deals_item.dart';
 
@@ -21,7 +20,7 @@ class HomePageScreen extends StatelessWidget {
     AppImages.appleImage,
     AppImages.appleImage,
   ];
-  List<String> prices = ["900", "800", "700", "500"];
+  List<String> prices = [r"$900", r"$800", r"$700", r"$500"];
 
   @override
   Widget build(BuildContext context) {
