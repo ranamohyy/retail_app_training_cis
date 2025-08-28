@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/core/helpers/app_assets.dart';
+import 'package:hello_flutter/core/helpers/app_colors.dart';
 import 'package:hello_flutter/core/helpers/app_elevated_button.dart';
 import 'package:hello_flutter/core/helpers/app_field.dart';
+import 'package:hello_flutter/core/helpers/app_styles.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -15,16 +18,13 @@ class SignInScreen extends StatelessWidget {
             onTap: () {},
             child: Icon(
               Icons.arrow_back_ios_new,
-              color: Color(0xffFF5E00),
+              color:AppColors.primaryColor,
             )),
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
           "Sign In ",
-          style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.w400,
-              color: Color(0xffFF5E00)),
+          style: AppTextStyles.kTextAppBarStyle,
         ),
       ),
       backgroundColor: Colors.white,
@@ -35,7 +35,7 @@ class SignInScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Image.asset(
-                "assets/images/login.png",
+                AppImages.signInImage,
                 height: 300,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -46,11 +46,7 @@ class SignInScreen extends StatelessWidget {
               Text(
                 "Enter your Email and \n password to access your account",
                 textAlign: TextAlign.start,
-                style: TextStyle(
-                  color: Color(0xff7F4E1D),
-                  fontWeight: FontWeight.normal,
-                  fontSize: 20,
-                ),
+                style: AppTextStyles.kTextStyle20SecondPrimary,
               ),
               SizedBox(
                 height: 25,
@@ -66,10 +62,7 @@ class SignInScreen extends StatelessWidget {
               Text(
                 "Forget Password",
                 textAlign: TextAlign.end,
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Color(0xffFF5E00)),
+                style:AppTextStyles.kTextStyle16pPrimary,
               ),
               SizedBox(
                 height: 16,
@@ -83,17 +76,11 @@ class SignInScreen extends StatelessWidget {
                 children: [
                   Text(
                     "Don’t have an account?",
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xff7F4E1D)),
+                    style:AppTextStyles.kTextStyle16SecondPrimary,
                   ),
                   Text(
                     "Sign Up",
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xffFF5E00)),
+                    style:AppTextStyles.kTextStyle16pPrimary,
                   )
                 ],
               )
