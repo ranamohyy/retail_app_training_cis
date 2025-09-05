@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/core/helpers/app_assets.dart';
 import 'package:hello_flutter/core/helpers/app_elevated_button.dart';
+import 'package:hello_flutter/features/widgets/custom_app_bar.dart';
 
 import '../../../widgets/cart_item.dart';
 class CartScreen extends StatelessWidget {
@@ -18,27 +19,7 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
-      appBar: AppBar(
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        backgroundColor: Colors.grey.shade200,
-        title: Text(
-          "Cart",
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.w400,
-            color: Color(0xffFF5E00),
-          ),
-        ),
-        centerTitle: true,
-        leading: GestureDetector(
-          onTap: () {},
-          child: Icon(
-            Icons.arrow_back_ios_new,
-            color: Color(0xffFF5E00),
-          ),
-        ),
-      ),
+      appBar: CustomAppBar(title: "Cart"),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children:[
@@ -54,7 +35,7 @@ class CartScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12.0),
-            child: AppElevatedButton(text: 'CheckOut',),
+            child: AppElevatedButton(text: 'CheckOut',onPressed: (){},),
           )
      ] ),
 

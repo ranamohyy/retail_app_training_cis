@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/core/helpers/app_assets.dart';
+import 'package:hello_flutter/core/helpers/app_field.dart';
+import 'package:hello_flutter/features/widgets/custom_app_bar.dart';
 
 import '../../../widgets/categories_item.dart';
 
@@ -9,7 +11,14 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
-      appBar: AppBar(),
+      appBar: CustomAppBar(title: "Categories",showBackButton: false,
+        isNormalHeight: false,
+        bottom:
+      PreferredSize(preferredSize: Size.fromHeight(200), child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: AppTextField(hintText: "Search"),
+      )),
+      ),
       body: GridView.builder(
           itemCount:15,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

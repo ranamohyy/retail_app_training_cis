@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/core/helpers/app_assets.dart';
-import 'package:hello_flutter/core/helpers/app_colors.dart';
 import 'package:hello_flutter/core/helpers/app_elevated_button.dart';
 import 'package:hello_flutter/core/helpers/app_field.dart';
 import 'package:hello_flutter/core/helpers/app_styles.dart';
+import 'package:hello_flutter/features/home_nav/view.dart';
+import 'package:hello_flutter/features/sign_up/view.dart';
+
+import '../widgets/custom_app_bar.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -11,22 +14,7 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        leading: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.arrow_back_ios_new,
-              color:AppColors.primaryColor,
-            )),
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        title: Text(
-          "Sign In ",
-          style: AppTextStyles.kTextAppBarStyle,
-        ),
-      ),
+      appBar: CustomAppBar(title:  "Sign In ",),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
@@ -67,7 +55,10 @@ class SignInScreen extends StatelessWidget {
               SizedBox(
                 height: 16,
               ),
-              AppElevatedButton(text: "Sign In"),
+              AppElevatedButton(text: "Sign In",
+              onPressed:()=> Navigator.push(context,MaterialPageRoute(builder:
+              (context) => HomeNavScreen(),)),
+              ),
               SizedBox(
                 height: 12,
               ),
@@ -78,9 +69,14 @@ class SignInScreen extends StatelessWidget {
                     "Don’t have an account?",
                     style:AppTextStyles.kTextStyle16SecondPrimary,
                   ),
-                  Text(
-                    "Sign Up",
-                    style:AppTextStyles.kTextStyle16pPrimary,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpScreen(),));
+                    },
+                    child: Text(
+                      "Sign Up",
+                      style:AppTextStyles.kTextStyle16pPrimary,
+                    ),
                   )
                 ],
               )

@@ -5,6 +5,8 @@ import 'package:hello_flutter/features/home_nav/screens/categories/view.dart';
 import 'package:hello_flutter/features/home_nav/screens/favorite/view.dart';
 import 'package:hello_flutter/features/home_nav/screens/home_page/view.dart';
 import 'package:hello_flutter/features/home_nav/screens/profile/view.dart';
+
+import '../orders/view.dart';
 class HomeNavScreen extends StatefulWidget {
   HomeNavScreen({super.key});
 
@@ -19,7 +21,7 @@ class _HomeNavScreenState extends State<HomeNavScreen> {
     HomePageScreen(),
     CategoriesScreen(),
     ProfileScreen(),
-    FavoriteScreen(),
+    OrdersScreen(),
     CartScreen(),
   ];
 

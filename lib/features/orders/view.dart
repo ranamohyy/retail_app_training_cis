@@ -18,6 +18,7 @@ class OrdersScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+
           elevation: 0,
           scrolledUnderElevation: 0,
           bottom:PreferredSize(

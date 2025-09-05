@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hello_flutter/core/helpers/app_assets.dart';
+import 'package:hello_flutter/features/widgets/custom_app_bar.dart';
 import '../../../../core/helpers/app_colors.dart';
 import '../../../../core/helpers/app_styles.dart';
 import '../../../widgets/profileListTileWidget.dart';
@@ -17,22 +18,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.scaffoldBackGroundColor,
-      appBar: AppBar(
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        leading: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.arrow_back_ios_new,
-              color:AppColors.primaryColor,
-            )),
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        title: Text(
-          "Profile",
-          style: AppTextStyles.kTextAppBarStyle,
-        ),
-      ),
+      appBar: CustomAppBar(title: "Profile",showBackButton: false,),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(

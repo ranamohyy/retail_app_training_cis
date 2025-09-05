@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hello_flutter/core/helpers/app_assets.dart';
 import 'package:hello_flutter/core/helpers/app_elevated_button.dart';
 import 'package:hello_flutter/core/helpers/app_styles.dart';
+import 'package:hello_flutter/features/sign_up/view.dart';
 import '../../core/helpers/app_outlined_button.dart';
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -41,7 +42,11 @@ class OnBoardingScreen extends StatelessWidget {
             SizedBox(
               height: 51,
             ),
-            AppElevatedButton(text: "Sign Up"),
+            AppElevatedButton(text: "Sign Up",onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder:
+              (context) => SignUpScreen(),
+              ));
+            },),
             SizedBox(
               height: 16,
             ),

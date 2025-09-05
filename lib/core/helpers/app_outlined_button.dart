@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/features/sign_in/view.dart';
 class AppOutlinedButton extends StatelessWidget {
    AppOutlinedButton({super.key,required this.text});
 String text;
   @override
   Widget build(BuildContext context) {
     return   OutlinedButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SignInScreen(),));
+
+      },
       style: OutlinedButton.styleFrom(
         fixedSize: Size(300, 50),
         side: BorderSide(
