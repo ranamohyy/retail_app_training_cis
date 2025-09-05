@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/core/helpers/app_assets.dart';
-import 'package:hello_flutter/core/helpers/app_colors.dart';
 import 'package:hello_flutter/core/helpers/app_elevated_button.dart';
 import 'package:hello_flutter/core/helpers/app_field.dart';
 import 'package:hello_flutter/core/helpers/app_styles.dart';
+import '../home_nav/view.dart';
+import '../widgets/custom_app_bar.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -11,23 +12,7 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        backgroundColor: Colors.white,
-        title: Text(
-          "Sign Up",
-          style:AppTextStyles.kTextAppBarStyle,
-        ),
-        centerTitle: true,
-        leading: GestureDetector(
-          onTap: () {},
-          child: Icon(
-            Icons.arrow_back_ios_new,
-            color: AppColors.primaryColor,
-          ),
-        ),
-      ),
+      appBar: CustomAppBar(title: "Sign Up",),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
@@ -68,7 +53,9 @@ class SignUpScreen extends StatelessWidget {
               SizedBox(
                 height: 29,
               ),
-              AppElevatedButton(text: "Sign Up")
+              AppElevatedButton(text: "Sign Up",onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomeNavScreen(),));
+              },)
             ],
           ),
         ),
